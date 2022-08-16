@@ -1,0 +1,465 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height : 3rem;
+    /* ===Colors=== */
+    /* base color */
+    --hue-color : 250;
+    /* HSL Color Mode */
+    --first-color : hsl(var(--hue-color),69%,61%);
+    --first-color-second : hsl(var(--hue-color),69%,61%);
+    --first-color-alt : hsl(var(--hue-color),57%,53%);
+    --first-color-lighter : hsl(var(--hue-color),92%,85%);
+    --title-color : hsl(var(--hue-color),8%,15%);
+    --text-color : hsl(var(--hue-color),8%,45%);
+    --text-color-light : hsl(var(--hue-color),8%,65%);
+    --input-color : hsl(var(--hue-color),70%,96%);
+    --body-color : hsl(var(--hue-color),10%,100%);
+    --container-color : #fff;
+    --scroll-bar-color : hsl(var(--hue-color),12%,90%);
+    --scoll-thumb-color : hsl(var(--hue-color),12%,80%);
+
+    /* Font and Typography */
+    --body-font : 'Poppins', sans-serif;
+
+    /* .5rem = 8px 1rem = 16px */
+    --big-font: 2rem;
+    --h1-font: 1.5rem;
+    --h2-font: 1.25rem;
+    --h3-font: 1.125rem;
+    --normal-font: .938rem;
+    --small-font : .813rem;
+    --smaller-font : .75rem;
+
+    /* Font Weights */
+    --font-medium : 500;
+    --font-semi-bold : 600;
+
+    /* Margins bottom */
+    --mb-0-25 : .25rem;
+    --mb-0-5 : .5rem;
+    --mb-0-75 : .75rem;
+    --mb-1 : 1rem;
+    --mb-1-5 : 1.5rem;
+    --mb-2 : 2rem;
+    --mb-2-5 : 2.5rem;
+    --mb-3 : 3rem;
+
+    /* Z indices */
+    --z-tooltip : 10;
+    --z-fixed : 100;
+    --z-modal : 1000;
+}
+
+/* Font size for large devices */
+@media  screen and(min-width: 968px) {
+  :root{
+    --big-font: 3rem;
+    --h1-font: 2.25rem;
+    --h2-font: 1rem;
+    --h3-font: 1.25rem;
+    --normal-font: 1rem;
+    --small-font: .875rem;
+    --smaller-font: .813rem;
+  }  
+}
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*==================== BASE ====================*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+h1,h2,h3,h4{
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Reusable classes */
+.section{
+  padding: 2rem 0 4rem;
+}
+
+.section-title{
+  font-size: var(--h1-font);
+  color: var(--title-color);
+}
+
+.section-subtitle{
+  display: block;
+  font-size: var(--small-font);
+  margin-bottom: var(--mb-3);
+}
+
+.section-title,.section-subtitle{
+  text-align: center;
+}
+
+/* Layout */
+.container{
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+.grid{
+  display: grid;
+  gap : 1.5rem;
+}
+.header{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+/*==================== NAV ====================*/
+.nav{
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo,.nav-togggle{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+.nav-logo{
+  color: var(--first-color)
+}
+
+.nav-toggle{
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.nav-toggle:hover{
+  color: var(--first-color);
+}
+
+@media screen and (max-width : 768px) {
+  .nav-menu{
+    position: fixed;
+    bottom: -100%;
+    left : 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px rgba(0,0,0,.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: .3s ;
+  }
+}
+
+.nav-list{
+  grid-template-columns: repeat(3,1fr);
+  gap : 2rem;
+}
+.nav-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+.nav-link:hover{
+  color: var(--first-color);
+}
+.nav-icon{
+  font-size: 1.2rem;
+}
+
+.nav-close{
+  position: absolute;
+  right : 1.3rem;
+  bottom: .5rem;
+  font-size: 1,5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+.nav-close:hover{
+  color: var(--first-color-alt);
+}
+/* show menu */
+.show-menu{
+  bottom: 0;
+}
+
+/* Active link */
+
+
+/* Change background header */
+
+
+/*==================== HOME ====================*/
+.home-container{
+  gap: 1rem; 
+}
+
+.home-content{
+  grid-template-columns: .5fr 3fr;
+  padding-top: 3.5rem;
+  align-items: center;
+}
+.home-social{
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+}
+.home-social-icon{
+  font-size: 1.25rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+.home-social-icon:hover{
+  color: var(--first-color-alt);
+}
+
+.home-blob{
+  width: 200px;
+  fill: var(--first-color);
+}
+.home-blob-img{
+  width: 170px;
+}
+.home-data{
+  grid-column: 1/3;
+}
+.home-title{
+  font-size : var(--big-font);
+}
+.home-subtitle{
+  font-size: var(--h3-font);
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-75);
+}
+.home-description{
+  margin-bottom: var(--mb-2);
+}
+.home-scroll{
+  /* display:flex */
+}
+.home-scroll-button{
+  color: var(--first-color);
+  transition: .3s;
+}
+.home-scroll-button:hover{
+  transform: translateY(.25rem);
+}
+.home-scroll-mouse{
+  font-size: 2rem;
+}
+.home-scroll-name{
+  font-size : var(--small-font);
+  color : var(--title-color);
+  font-weight: var(--font-medium);
+  margin-right: var(--mb-0-25);
+}
+.home-scroll-arrow{
+  font-size: 1.25rem;
+}
+/*==================== BUTTONS ====================*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding : 1rem;
+  border-radius : .5rem;
+  font-weight: var(--font-medium);
+}
+.button:hover{
+  background-color: var(--first-color-alt);
+}
+.button-icon{
+  font-size: 1.25rem;
+  margin-left : var(--mb-0-5);
+  transition: .3s;
+}
+.button-flex{
+  display: inline-flex;
+  align-items: center;
+}
+/*==================== ABOUT ====================*/
+.about-img{
+  width: 200px;
+  justify-self: center;
+  align-self: center;
+  border-radius: .5rem;
+}
+.about-description{
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+.about-info{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2-5);
+}
+.about-info-name{
+  font-size : var(--smaller-font);
+}
+.about-info-title{
+  font-size: var(--h2-font);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+.about-info-title,
+.about-info-name{
+  display: block;
+  text-align: center;
+}
+.about-buttons{
+  display: flex;
+  justify-content: center;
+}
+/*==================== SKILLS ====================*/
+.skills-container{
+  row-gap: 0;
+}
+.skills-content.hide .skills-list{
+  height: 0;
+  overflow: hidden;
+}
+.skills-content.hide .skills-arrow{
+  transform: rotate(180deg);
+}
+.skills-content.hide .skills-header{
+  margin-bottom: 0;
+}
+.skills-header{
+  display: flex;
+  margin-bottom: var(--mb-2-5);
+  align-items: center;
+  cursor: pointer;
+}
+.skills-list{
+  row-gap: 1.5rem;
+  padding-left: 2.75rem;
+  margin-bottom: var(--mb-2-5);
+  transition: .3s ease;
+}
+.skills-icon,.skills-arrow{
+  font-size: 2rem;
+  color: var(--first-color);
+}
+.skills-icon{
+  margin-right: var(--mb-0-75);
+} 
+.skills-title{
+  font-size: var(--h3-font);
+}
+.skills-sub-title{
+  font-size: var(--small-font);
+  color: var(--text-color-light);
+}
+.skills-arrow{
+  margin-left: auto;
+  transition: .4s;
+}
+.skills-titles{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+  align-items: center;
+}
+.skills-name{
+  font-size: var(--normal-font);
+  font-weight: var(--font-medium);
+}
+.skills-bar,
+.skills-percentage{
+  height: 5px;
+  border-radius: .25rem;
+}
+.skills-bar{
+  background-color: var(--first-color-lighter);
+}
+.skills-percentage{
+  display: block;
+  background-color: var(--first-color);
+}
+
+.skills-html{
+  width: 90%;
+}
+.skills-css{
+  width: 60%;
+}
+.skills-nodejs{
+  width: 90%;
+}
+.skills-mongodb{
+  width: 40%;
+}
+/*==================== QUALIFICATION ====================*/
+
+
+/*==================== SERVICES ====================*/
+
+
+/* Active Modal */
+
+
+/*==================== PORTFOLIO ====================*/
+
+
+/*==================== PROJECT IN MIND ====================*/
+
+
+/*==================== TESTIMONIAL ====================*/
+
+
+/*==================== CONTACT ME ====================*/
+
+
+/*==================== FOOTER ====================*/
+
+
+/*========== SCROLL UP ==========*/
+
+
+/* Show scroll */
+
+
+/*========== SCROLL BAR ==========*/
+
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
