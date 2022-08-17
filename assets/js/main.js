@@ -38,4 +38,24 @@ function toggleSkills(){
 }
 skillsHeader.forEach((el)=>{
     el.addEventListener('click', toggleSkills)
+});
+
+// qualification 
+
+var tabContents = document.querySelectorAll('.qualification-content');
+var tabButtons  = document.querySelectorAll('.qualification-button');
+
+tabButtons.forEach(el=>{
+    el.addEventListener('click',()=>{
+        var target = document.querySelector(el.dataset.target);
+        tabContents.forEach((content)=>{
+            content.classList.remove('active');
+        });
+        target.classList.add('active');
+
+        tabButtons.forEach((content)=>{
+            content.classList.remove('active');
+        });
+        el.classList.add('active')
+    })
 })
