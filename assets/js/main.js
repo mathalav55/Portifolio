@@ -58,4 +58,42 @@ tabButtons.forEach(el=>{
         });
         el.classList.add('active')
     })
+});
+
+// modal
+
+var modalViews = document.querySelectorAll('.services-modal');
+var modalButtons = document.querySelectorAll('.services-button');
+var closeBtns = document.querySelectorAll('.services-modal-close');
+
+modal = function(i){
+    modalViews[i].classList.add('active');
+}
+
+modalButtons.forEach((modalBtn,i)=>{
+    modalBtn.addEventListener('click',()=>{
+        modal(i);   
+    })  
 })
+
+closeBtns.forEach((closeBtn,i)=>{
+    closeBtn.addEventListener('click',()=>{
+        modalViews[i].classList.remove('active');
+    })
+})
+
+// Swiper
+let swiper = new Swiper(".portfolio-container", {
+    cssMode: true,
+    loop : true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+  });
