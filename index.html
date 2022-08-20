@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+        <link rel="icon" type="image/png" href="/assets/img/favicon.png">
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         
@@ -23,7 +24,7 @@
                 <div class="nav-menu" id="nav-menu">
                     <ul class="nav-list grid">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link">
+                            <a href="#home" class="nav-link active-link">
                                 <i class="uil uil-estate nav-icon"></i>Home
                             </a>
                         </li>
@@ -58,6 +59,9 @@
                 </div>
 
                 <div class="nav-btns">
+                    <!-- Change theme buttons -->
+                    <i class="uil uil-palette color-icon" id="color-icon"></i>
+                    <i class="uil uil-moon theme-icon" id="theme-icon"></i>
                     <div class="nav-toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
@@ -92,7 +96,7 @@
                                     165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                     129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home-blob-img" x="12" y="18" xlink:href="./assets/img/perfil.png"/>
+                                    <image class="home-blob-img" x="12" y="18" xlink:href=""/>
                                 </g>
                             </svg>
                         </div>
@@ -123,7 +127,7 @@
                 <h2 class="section-title">About Me</h2>
                 <span class="section-subtitle">My Introduction</span>
                 <div class="about-container container grid">
-                    <img src="./assets/img/about.jpg" alt="" class="about-img">
+                    <img src="./assets/img/" alt="" class="about-img">
 
                     <div class="about-data">
                         <p class="about-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus consectetur repellat possimus odio.</p>
@@ -141,12 +145,13 @@
                                 <span class="about-info-name">Companies <br> Worked</span>
                             </div>
                         </div>
+                        <div class="about-buttons">
+                            <a href="./assets/pdf/Alexa-Cv.pdf" class="button button-flex" download="">
+                                Download CV<i class="uil uil-download-alt button-icon"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="about-buttons">
-                        <a href="./assets/pdf/Alexa-Cv.pdf" class="button button-flex" download="">
-                            Download CV<i class="uil uil-download-alt button-icon"></i>
-                        </a>
-                    </div>
+                    
                 </div>
             </section>
 
@@ -157,75 +162,68 @@
                 </h1>
                 <span class="section-subtitle">My technical level</span>
                 <div class="skills-container container grid">
-                    <div class="">
-                        <div class="skills-container container grid">
-                            <!-- skills 1 -->
-                            <div class="skills-content ">
-                                <div class="skills-header">
-                                    <i class="uil uil-brackets-curly skills-icon"></i>
-                                    <div>
-                                        <h1 class="skills-title">Frontend Developer</h1>
-                                        <span class="skills-subtitle">00 years experience</span>
-                                    </div>
-                                    <i class="uil uil-angle-up skills-arrow"></i>
+                        <!-- skills 1 -->
+                        <div class="skills-content ">
+                            <div class="skills-header">
+                                <i class="uil uil-brackets-curly skills-icon"></i>
+                                <div>
+                                    <h1 class="skills-title">Frontend Developer</h1>
+                                    <span class="skills-subtitle">00 years experience</span>
                                 </div>
-                                <div class="skills-list grid">
-                                    <div class="skills-data">
-                                        <div class="skills-titles">
-                                            <h1 class="skills-name">HTML</h1>
-                                            <span class="skills-number">90%</span>
-                                        </div>
-                                        <div class="skills-bar">
-                                            <span class="skills-percentage skills-html"></span>
-                                        </div>
-                                    </div>
-                                    <div class="skills-data">
-                                        <div class="skills-titles">
-                                            <h1 class="skills-name">CSS</h1>
-                                            <span class="skills-number">60%</span>
-                                        </div>
-                                        <div class="skills-bar">
-                                            <span class="skills-percentage skills-css"></span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <i class="uil uil-angle-up skills-arrow"></i>
                             </div>
-                            <div>
-
-                            </div>
-                            <!-- skills 2 -->
-                            <div class="skills-content hide">
-                                <div class="skills-header">
-                                    <i class="uil uil-server-network skills-icon"></i>
-                                    <div>
-                                        <h1 class="skills-title">Backend Developer</h1>
-                                        <span class="skills-subtitle">00 years experience</span>
+                            <div class="skills-list grid">
+                                <div class="skills-data">
+                                    <div class="skills-titles">
+                                        <h1 class="skills-name">HTML</h1>
+                                        <span class="skills-number">90%</span>
                                     </div>
-                                    <i class="uil uil-angle-up skills-arrow"></i>
+                                    <div class="skills-bar">
+                                        <span class="skills-percentage skills-html"></span>
+                                    </div>
                                 </div>
-                                <div class="skills-list grid">
-                                    <div class="skills-data">
-                                        <div class="skills-titles">
-                                            <h1 class="skills-name">NodeJS</h1>
-                                            <span class="skills-number">90%</span>
-                                        </div>
-                                        <div class="skills-bar">
-                                            <span class="skills-percentage skills-nodejs"></span>
-                                        </div>
+                                <div class="skills-data">
+                                    <div class="skills-titles">
+                                        <h1 class="skills-name">CSS</h1>
+                                        <span class="skills-number">60%</span>
                                     </div>
-                                    <div class="skills-data">
-                                        <div class="skills-titles">
-                                            <h1 class="skills-name">MongoDB</h1>
-                                            <span class="skills-number">40%</span>
-                                        </div>
-                                        <div class="skills-bar">
-                                            <span class="skills-percentage skills-mongodb"></span>
-                                        </div>
+                                    <div class="skills-bar">
+                                        <span class="skills-percentage skills-css"></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <!-- skills 2 -->
+                        <div class="skills-content hide">
+                            <div class="skills-header">
+                                <i class="uil uil-server-network skills-icon"></i>
+                                <div>
+                                    <h1 class="skills-title">Backend Developer</h1>
+                                    <span class="skills-subtitle">00 years experience</span>
+                                </div>
+                                <i class="uil uil-angle-up skills-arrow"></i>
+                            </div>
+                            <div class="skills-list grid">
+                                <div class="skills-data">
+                                    <div class="skills-titles">
+                                        <h1 class="skills-name">NodeJS</h1>
+                                        <span class="skills-number">90%</span>
+                                    </div>
+                                    <div class="skills-bar">
+                                        <span class="skills-percentage skills-nodejs"></span>
+                                    </div>
+                                </div>
+                                <div class="skills-data">
+                                    <div class="skills-titles">
+                                        <h1 class="skills-name">MongoDB</h1>
+                                        <span class="skills-number">40%</span>
+                                    </div>
+                                    <div class="skills-bar">
+                                        <span class="skills-percentage skills-mongodb"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </section>
 
@@ -535,29 +533,195 @@
                                 <i class="uil uil-message project-icon button-icon"></i>
                             </a>
                         </div>
-                        <img src="./assets/img/project.png" alt="" class="project-img">
+                        <img src="./assets/img/" alt="" class="project-img">
                     </div>
                 </div>
             </section>
 
             <!--==================== TESTIMONIAL ====================-->
             <section class="testimonial section">
-                
+                <h1 class="section-title">Testimonial</h1>
+                <span class="section-subtitle">My clients saying</span>
+                <div class="testimonial-container container swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="testiomnial-content swiper-slide">
+                            <div class="testimonial-data">
+                                <div class="testimonial-header">
+                                    <img src="./assets/img/testimonial1.jpg" alt="" class="testimonial-img">
+                                    <div>
+                                        <h3 class="testimonial-name">Sara Smith</h3>
+                                        <span class="testimonial-client">Client</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                </div>
+                            </div>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Aut dolore aperiam assumenda, illo nostrum iure sit totam, 
+                                quos asperiores earum minima ab neque.
+                            </p>
+                        </div>
+                         <!-- Testimonial 2 -->
+                         <div class="testiomnial-content swiper-slide">
+                            <div class="testimonial-data">
+                                <div class="testimonial-header">
+                                    <img src="./assets/img/testimonial2.jpg" alt="" class="testimonial-img">
+                                    <div>
+                                        <h3 class="testimonial-name">Matt Robinson</h3>
+                                        <span class="testimonial-client">Client</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                </div>
+
+                            </div>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Aut dolore aperiam assumenda, illo nostrum iure sit totam, 
+                                quos asperiores earum minima ab neque.
+                            </p>
+                        </div>
+                         <!-- Testimonial 3 -->
+                         <div class="testiomnial-content swiper-slide">
+                            <div class="testimonial-data">
+                                <div class="testimonial-header">
+                                    <img src="./assets/img/testimonial3.jpg" alt="" class="testimonial-img">
+                                    <div>
+                                        <h3 class="testimonial-name">Raul Haris</h3>
+                                        <span class="testimonial-client">Client</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                    <i class="uil uil-star testimonial-icon-star"></i>
+                                </div>
+
+                            </div>
+                            <p class="testimonial-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Aut dolore aperiam assumenda, illo nostrum iure sit totam, 
+                                quos asperiores earum minima ab neque.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-testimonial"></div>
+                </div>
             </section>
 
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
+                <h1 class="section-title">Contact me</h1>
+                <span class="section-subtitle">Get in touch</span>
 
+                <div class="contact-container container grid">
+                    <!-- <div>
+                        <div class="contact-information">
+                            <i class="uil uil-phone contact-icon"></i>
+                            <div>
+                                <h3 class="contact-title">Call me</h3>
+                                <span class="contact-detail">+91-6309648049</span>
+                            </div>
+                        </div>
+                        <div class="contact-information">
+                            <i class="uil uil-envelope-alt contact-icon"></i>
+                            <div>
+                                <h3 class="contact-title">Email</h3>
+                                <span class="contact-detail">matalav55@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-information">
+                            <i class="uil uil-instagram contact-icon"></i>
+                            <div>
+                                <h3 class="contact-title">Instagram</h3>
+                                <span class="contact-detail">@matalavamsikrishna</span>
+                            </div>
+                        </div>
+                    </div> -->
+                    <form action="" class="contact-form grid">
+                        <div class="contact-inputs grid">
+                            <div class="contact-content">
+                                <label for="" class="contact-label">Name</label>
+                                <input class="contact-input" type="text">
+                            </div>
+                            <div class="contact-content">
+                                <label for="" class="contact-label">Email</label>
+                                <input class="contact-input" type="email">
+                            </div>
+                        </div>
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Project</label>
+                            <input class="contact-input" type="text">
+                        </div>
+                        <div class="contact-content">
+                            <label for="" class="contact-label">Message</label>
+                            <textarea name="" id="" cols="0" rows="5" class="contact-input"></textarea>
+                        </div>
+                        <div>
+                            <a href="#" class="button button-flex">
+                                Send Message
+                                <i class="uil uil-message button-icon"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </section>
         </main>
 
         <!--==================== FOOTER ====================-->
         <footer class="footer">
-         
+            <div class="footer-bg">
+                <div class="footer-container container grid">
+                         <div>
+                            <h1 class="footer-title">Vamsi Mathala</h1>
+                            <span class="footer-subtitle">Web Developer</span>
+                         </div>
+                         <ul class="footer-links">
+                            <li>
+                                <a href="#services" class="footer-link">Services</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio" class="footer-link">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="footer-link">Contact me</a>
+                            </li>
+                         </ul>
+
+                         <div class="footer-socials">
+                            <a href="#" class="footer-social">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a href="#" class="footer-social">
+                                <i class="uil uil-instagram"></i>
+                            </a>
+                            <a href="#" class="footer-social">
+                                <i class="uil uil-whatsapp"></i>
+                            </a>
+                         </div>
+                </div>
+                <p class="footer-copy">&#169; Vamsi Mathala </p>
+            </div>
         </footer>
         
         <!--==================== SCROLL TOP ====================-->
-        
+        <a href="#" class="scroll-up">
+            <i class="uil uil-arrow-up scroll-up-icon"></i>
+        </a>
 
         <!--==================== SWIPER JS ====================-->
         <script src="./assets/js/swiper-bundle.min.js"></script>
