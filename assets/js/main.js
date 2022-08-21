@@ -176,3 +176,19 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// color theme
+const coloricon = document.querySelector('.color-icon');
+const r = document.querySelector(':root');
+coloricon.addEventListener('click',()=>{
+    const rs = getComputedStyle(r);
+    let curColor = rs.getPropertyValue('--hue-color');
+    curColor = parseInt(curColor);
+
+    let randomColor = Math.floor(Math.random() * (360))
+
+    while(randomColor == curColor){
+        randomColor = Math.floor(Math.random() * (360));
+    }
+    r.style.setProperty('--hue-color',randomColor);
+});

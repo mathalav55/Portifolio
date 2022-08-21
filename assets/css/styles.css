@@ -74,6 +74,8 @@ body.dark-theme{
     --body-color : hsl(var(--hue-color),28%,12%);
     --container-color :  hsl(var(--hue-color),29%,16%);
 }
+
+
 /*========== Button Dark/Light ==========*/
 .nav-btns{
   display: flex;
@@ -272,7 +274,7 @@ img{
 }
 
 .home-blob{
-  width: 200px;
+  width: 260px;
   fill: var(--first-color);
 }
 .home-blob-img{
@@ -292,9 +294,6 @@ img{
 }
 .home-description{
   margin-bottom: var(--mb-2);
-}
-.home-scroll{
-  /* display:flex */
 }
 .home-scroll-button{
   color: var(--first-color);
@@ -667,7 +666,6 @@ img{
 }
 .project-bg{
   background-color: var(--first-color-second);
-  padding-top: 3rem;
 }
 .project-title{
   font-size: var(--h3-font);
@@ -680,9 +678,11 @@ img{
 .project-description{
   color : #fff;
 }
+.project-data{
+  padding: 3rem 0;
+}
 .project-img{
-  width: 240px;
-  justify-self: center;
+  display: none;
 }
 /*==================== TESTIMONIAL ====================*/
 .testimonial-data,
@@ -913,6 +913,10 @@ img{
   .footer-container{
     grid-template-columns: repeat(2,1fr);
   }
+  .project-img{
+    display: block;
+    width: 180px;
+  }
   .qualification-container,
   .contact-container{
     display: grid;
@@ -1025,12 +1029,9 @@ img{
   .project-container{
     background-color: var(--first-color-second);
     border-radius: 1rem;
-    padding: 3rem 2.5rem 0;
+    padding: 0 2.5rem 0;
     grid-template-columns: 1fr max-content;
     column-gap: 3rem;
-  }
-  .project-data{
-    padding-top: .8rem;
   }
   .footer-container{
     grid-template-columns: 1fr max-content 1fr;
