@@ -847,7 +847,7 @@ img{
 }
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width : 400px) {
+@media screen and (max-width : 368px) {
   .container{
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -862,7 +862,7 @@ img{
     grid-template-columns: .25fr 3fr;
   }
   .home-blob{
-    width: 180px;
+    width: 220px;
   }
   .skills-title{
     font-size: var(--normal-font);
