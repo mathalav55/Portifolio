@@ -192,3 +192,11 @@ coloricon.addEventListener('click',()=>{
     }
     r.style.setProperty('--hue-color',randomColor);
 });
+
+// skills line change
+const skillsData = document.querySelectorAll('.skills-data');
+skillsData.forEach(skill=>{
+    let skillNumber = skill.querySelector('.skills-number');
+    let value = parseInt(skillNumber.innerHTML.slice(0,2));
+    skill.querySelector('.skills-percentage').style.width = value + '%';
+})
