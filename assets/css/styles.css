@@ -797,7 +797,7 @@ img{
 }
 .footer-copy{
   text-align: center;
-  color: var(--text-color-light);
+  color: #fff;
   font-size: var(--smaller-font);
   margin-top: 3rem;
 }
@@ -987,7 +987,7 @@ img{
     column-gap: 2rem;
   }
   .about-description{
-    text-align: initial;
+    text-align: justify;
   }
   /* .about-info{
     justify-content: space-between;
@@ -1005,7 +1005,7 @@ img{
     grid-template-columns: .5fr;
   }
   .services-container{
-    grid-template-columns: repeat(3,218px);
+    grid-template-columns: repeat(2,218px);
     justify-content: center;
   }
   .services-icon{
@@ -1069,7 +1069,7 @@ img{
     column-gap: 4rem;
   }
   .services-container{
-    grid-template-columns: repeat(3,248px);
+    grid-template-columns: repeat(2,248px);
     column-gap: 3rem;
   }
   .portfolio-content{
